@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="utf-8">
+	<meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Code,Proteus">
+	<title>Microcontroller Introduction</title>
+</head>
+
+
+<body  bgcolor=white>
+
+	<div id="header_common"><img src="assets/images/github_banner.png" alt="common_header"></div>
+	<div id="topic_container"><h2>Theory - 01: Introduction to Microcontrollers</h2></div>
+
+
+  <table align = center width=1000 height=1000  bgcolor= white>
+	  <tr>
+	    <td width=200 bgcolor=white valign=top>
+
+		    <div id="exp_lst_cont">
+          <h3>Theories :</h3>
+          <ul class="ul_exp">
+            <li><a href="https://gmostofabd.github.io/8051-LED/">Introduction to Microcontroller</a></li>
+            <li><a href="https://gmostofabd.github.io/8051-Push-Button/">8051 Architecture</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-7Segment/">8051 Instruction Set</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-LED-Matrix/">Assembly Programming</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-LCD/">Development Tools & Environment</a></li>
+          </ul>
+
+          <h3>Experiments :</h3>
+            <ul class="ul_exp">
+              <li><a href="https://gmostofabd.github.io/8051-LED/">LED Blink</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-Push-Button/">Push Button Interfacing</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-7Segment/">Seven Segment Display Interfacing</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-LED-Matrix/">LED Dot Matrix Display Interfacing</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-LCD/">LCD Interfacing</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-Analog/">Potentiometer (or Analog) Reading</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-Keypad/">Key Pad Matrix Interfacing</a></li>
+              <li><a href="https://gmostofabd.github.io/dc-motor-8051/">DC Motor Interfacing</a></li>
+              <li><a href="https://gmostofabd.github.io/stepper-motor-8051/">Stepper Motor Interfacing</a></li>
+              <li><a href="https://gmostofabd.github.io/8051-RTC/">RTC Interfacing</a></li>
+            </ul>
+        </div>
+
+        <div id="proj_lst_cont">
+            <ol><h3>8051 Projects:</h3>
+              <li>Access Control System</li>
+              <li>6 Digit Clock</li>
+              <li>IR Remote Load ON OFF</li>
+              <li>Line Follower</li>
+              <li>Incubator Controller</li>
+            </ol>
+        </div>         
+
+    </td>
+
+
+	  <td width=600 align=center valign=top bgcolor= white>
+		
+		<h3>Introduction:</h3>
+      <blockquote>
+		  <p>
+        The 8051 Microcontroller is 40 pin DIP IC designed by Intel in 1981. This is an 
+        8-bit microcontroller. It is a very famous Microcontroller of Intel family.
+
+         <br><br>These kinds of microcontrollers are used in different appliances like 
+         televisions, washing machines, telephones or some other electronic gadgets. 
+         The microcontroller is more complex than microprocessors based on their 
+         architecture. The first generation Intel Microcontroller was 8048. The 8051 
+         is successor of that. So it is treated as the second generation microcontroller. 
+         8051 belongs to MCS-51 family of Intel Micro controllers. In this section, we 
+         will discuss various topics on 8051 Microcontroller.
+	    </p>
+      </blockquote>
+
+      <h3>Introduction to AT8051</h3>
+        <div class="box_70"><img src="assets/images/pin_Func.png"/><span class="capt_cont">Pins and Functional block diagram of 8051 Microcontroller</span></div>
+
+
+      <h3>Features of 8051 Microcontroller</h3>            
+
+        <ul class="ul_gen">
+          <li>8-bit CPU microcontroller, means MC 8051 can Read, Write and Process 8 bit data.</li>
+          <li>16-bit Program Counter.</li>
+          <li>8-bit Program Status Word (PSW).</li>
+          <li>8-bit Stack Pointer.</li>
+          <li>128 bytes on-chip data memory (RAM)</li>
+          <li>Special Function Registers (SFRs) of 128 bytes.</li>
+          <li>32 I/O pins arranged as four 8-bit ports (P0 - P3)</li>
+          <li>Two 16-bit timer/counters : T0 and T1 .</li>
+          <li>4KB bytes on-chip program memory (ROM)</li>
+          <li>Four register banks.</li>
+          <li>One full duplex serial I/O.</li>
+          <li>Three internal and two external Interrupts.</li>
+        </ul>
+
+
+        <h3>8051 Flavors / Members:</h3>
+        <blockquote>
+          <p>
+            Some of the microcontrollers of 8051 family are given 
+            as follows:
+          </p>
+        </blockquote>
+
+          <div class="box_70"><img src="assets/images/8051_family_compare.png"/><span class="capt_cont">Fig: 8051 series MCU features comparison</span></div>
+
+
+        <h3>8051 MCU Architecture</h3>
+        <blockquote>
+          <p>
+            Irrespective of the manufacturer, the internal hardware design i.e. the 8051 
+            Microcontroller Architecture remains more or less the same. The following 
+            image shows the 8051 Microcontroller Architecture in a block diagram style.
+          </p>
+        </blockquote>
+        <div class="box_70"><img src="assets/images/8051-Microcontroller-Architecture-Image-1.jpg"/><span class="capt_cont">Fig: 8051 Microcontroller Architecture</span></div>
+
+        <blockquote>
+          <p>
+            The block diagram of the 8051 Microcontroller Architecture shows that 8051 Microcontroller 
+            consists of a CPU, RAM (SFRs and Data Memory), Flash (EEPROM), I/O Ports and control logic 
+            for communication between the peripherals.
+
+            <br><br>All these different peripherals inside the 8051 Microcontroller will communicate 
+            with each other via the 8 – bit Data Bus, also known as the internal data bus.
+          </p>
+        </blockquote>
+
+        <h3>Memory and Register organization of 8051 MCU</h3>
+        <p>The 8051 has a separate memory space for code (programs) and data. We will refer here to 
+          on-chip memory and external memory as shown in figure below:
+        </p>
+
+        <div class="box_70"><img src="assets/images/memory_map1.png"/><span class="capt_cont">Fig: 8051 Microcontroller Memory</span></div>
+
+        <h3>External Code Memory</h3>
+
+        <p>The executable program code is stored in this code memory. The code memory size 
+          is limited to 64KB (in a standard 8051). The code memory is read-only in normal 
+          operation and is programmed under special conditions e.g. it is a PROM or a Flash 
+          RAM type of memory.
+        </p>
+
+        <h3>External RAM Data Memory</h3>
+
+        <p>This is read-write memory and is available for storage of data. Up to 64KB of 
+          external RAM data memory is supported (in a standard 8051).
+        </p>
+
+
+        <h3>Internal Memory</h3>
+
+        <p>The 8051’s on-chip memory consists of 256 memory bytes organised as follows:
+
+          <br><br>
+          
+          <br><br>The first 128 bytes of internal memory is organised as shown in figure 
+          below, and is referred to as Internal RAM, or IRAM.
+        </p>
+
+        <div class="box_70"><img src="assets/images/iram.png"/><span class="capt_cont">Fig: Organisation of Internal RAM (IRAM) memory</span></div>
+
+
+        <h3>Register Banks: 00h to 1Fh</h3>
+          <p>
+            The 8051 uses 8 general-purpose registers R0 through R7 (R0, R1, R2, R3, R4, R5, R6, and R7). 
+            These registers are used in instructions such as:
+
+            <br><br>ADD A, R2 ; adds the value contained in R2 to the accumulator
+            <br><br>Note since R2 happens to be memory location 02h in the Internal RAM the following instruction has the same effect as the above instruction.
+            <br><br>ADD A, 02h
+            <br><br>Now, things get more complicated when we see that there are four banks of 
+            these general-purpose registers defined within the Internal RAM. For the moment 
+            we will consider register bank 0 only. Register banks 1 to 3 can be ignored when 
+            writing introductory level assembly language programs.
+          </p>
+
+          <h3>Bit Addressable RAM: 20h to 2Fh</h3>
+          <p>
+            The 8051 supports a special feature which allows access to bit variables. 
+            This is where individual memory bits in Internal RAM can be set or cleared. 
+            In all there are 128 bits numbered 00h to 7Fh. Being bit variables any one 
+            variable can have a value 0 or 1. A bit variable can be set with a command 
+            such as SETB and cleared with a command such as CLR. Example instructions are:
+
+            <br><br>SETB 25h ; sets the bit 25h (becomes 1)
+            <br><br>CLR 25h ; clears bit 25h (becomes 0)
+            <br><br>Note, bit 25h is actually bit b5 of Internal RAM location 24h.
+            <br><br>The Bit Addressable area of the RAM is just 16 bytes of Internal RAM 
+            located between 20h and 2Fh. So if a program writes a byte to location 20h, 
+            for example, it writes 8 bit variables, bits 00h to 07h at once.
+            <br><br>Note bit addressing can also be performed on some of the SFR registers, which will
+            be discussed later on.
+          </p>
+
+
+          <h3>General Purpose RAM: 30h to 7Fh</h3>
+
+          <h3>General Purpose Registers (R Registers)</h3>
+          <div class="box_70"><img src="assets/images/gpr.png"/><span class="capt_cont">Fig: GPR register layout</span></div>
+
+          <ul class="ul_gen">
+            <li>Address: 0x00 to 0x1F</li>
+            <li>Size : 8 Bit</li>
+            <li>Byte addressable.</li>
+            <li>32 General Purpose Registers.</li>
+            <li>Grouped in to 4 register banks.</li>
+            <li>Each bank has 8 registers R0 to R7.</li>
+            <li>Only 8 registers (one bank) can be directly accessed at a time.</li>
+            <li>Program can select any of the 4 register banks for it use through Program Status Word (PSW) Register.</li>
+            <li>Register bank 0 is used by default.</li>
+            <li>These auxiliary registers are generally used to assist in manipulating 
+              values and moving data from one memory location to another.</li>
+            <li>Used to temporarily store values.</li>
+          </ul>
+  
+          <blockquote>
+            <p>
+              These 80 bytes of Internal RAM memory are available for general-purpose data storage. Access to this 
+              area of memory is fast compared to access to the main memory and special instructions with single 
+              byte operands are used. However, these 80 bytes are used by the system stack and in practice 
+              little space is left for general storage. The general purpose RAM can be accessed using direct 
+              or indirect addressing modes. Examples of direct addressing:
+            </p>
+          </blockquote>
+
+          <br><br>MOV A, 6Ah ; reads contents of address 6Ah to accumulator
+          <br><br>Examples for indirect addressing (use registers R0 or R1):
+          <br><br>MOV R1, #6Ah ; move immediate 6Ah to R1
+          <br>MOV A, @R1 ; move indirect: R1 contains address of Internal RAM which contains data that is moved to A.
+          <br><br>These two instructions have the same effect as the direct instruction above.
+
+          <h3>Special Function Registers (SFR)</h3>
+          <div class="box_70"><img src="assets/images/sfr.png"/><span class="capt_cont">Fig: SFR register layout</span></div>
+
+          <ul class="ul_gen">
+            <li>Address 0x00 to 0xFF</li>
+            <li>There are 21 SFRs in standard 8051. (while 128 byes of the SFR address space available)</li>
+            <li>SFRs control special functionality of 8051</li>
+            <li>Allows configuring and controlling peripherals.</li>
+            <li>SFRs are accessed as if they were normal internal RAM.</li>
+            <li>Each SFR has an address and a name which reflects the purpose of that SFR.</li>
+            <li>SFRs are grouped in three categories:</li>
+                <ul>
+                  <li>I/O Ports SFR (PORT0, PORT1, PORT2, PORT3)</li>
+                  <li>Control SFR: (TCON, TMOD, PCON, SCON, IE, IP, PSW )</li>
+                  <li>Auxiliary SFR (SP, DPL, DPH, TL0, TL1, TH0, TH1, SBUFF, ACC, B)</li>
+                </ul>
+            <li>Not all SFRs are bit addressable.</li>
+            <li>Accessing undefined location results in unexpected behaviour.</li>
+          </ul>
+          <p>
+            We will discuss a few specific SFR registers here to help explain the SFR concept. 
+            Other specific SFR will be explained later.
+          </p>
+
+
+          <h3>Port Registers SFR</h3>
+          <div class="box_70"><img src="assets/images/port_reg.png"/><span class="capt_cont">Fig: PORT Registers</span></div>
+
+          <ul class="ul_gen">
+            <li>There are 4 (8 Bit) Port Registers . PORT0 (P0), PORT1 (P1), PORT2 (P2), PORT3 (P3),</li>
+            <li>Address: P0 - 0x80, P1 - 0x90, P2 - 0xA0, P3 - 0xB0.</li>
+            <li>Bit and Byte addressable.</li>
+            <li>Each registers is mapped to corresponding I/O Port. And I/O Pins can be accessed using these registers.</li>
+          </ul>
+
+          <blockquote>
+            <p>
+              For example Port 0 is a physical 8 bit I/O port on the 8051. Read (input) 
+              and write (output) access to this port is done in software by accessing 
+              the SFR P0 register which is located at address 80h. SFR P0 is also bit 
+              addressable. Each bit corresponds to a physical I/O pin on the 8051. 
+              Example access to port 0:
+
+              <br><br>SETB P0.7 ; sets the MSB bit of Port 0
+              <br>CLR P0.7 ; clears the MSB bit of Port 0
+              <br><br>The operand P0.7 uses the dot operator and refers to bit 7 of SFR P0. 
+              The same bit could be addressed by accessing bit location 87h. 
+              Thus the following two instructions have the same meaning:
+              <br><br>CLR P0.7
+              <br>CLR 87h
+
+            </p>
+          </blockquote>
+
+
+
+          <h3>PSW Program Status Word</h3>
+          <div class="box_70"><img src="assets/images/psw_reg4.png"/><span class="capt_cont">Fig: Program status word (PSW) flags</span></div>
+
+          <ul class="ul_gen">
+            <li>Also known as Flag Register</li>
+            <li>Address: 0xD0</li>
+            <li>Size : 8 Bit</li>
+            <li>Bit and Byte addressable.</li>
+            <li>Contains 6 Flag Bits and 2 user definable bits.</li>
+            <li>Flag bits indicate some conditions that resulted after an instruction was executed.</li>
+          </ul>
+
+          <p>
+            <strong>Carry flag. C :</strong>This is a conventional carry, or borrow, flag used in arithmetic 
+            operations. The carry flag is also used as the ‘Boolean accumulator’ for Boolean instruction 
+            operating at the bit level. This flag is sometimes referenced as the CY flag.
+
+            <br><br><strong>Auxiliary carry flag. AC :</strong>This is a conventional auxiliary carry 
+            (half carry) for use in BCD arithmetic.
+
+            <br><br><strong>Flag 0. F0 :</strong>This is a general-purpose flag for user programming.
+
+            <br><br><strong>Register bank select 0 and register bank select 1. RS0 and RS1 :</strong>
+            These bits define the active register bank (bank 0 is the default register bank).
+            <br><br><strong>Overflow flag. OV :</strong>This is a conventional overflow bit for 
+            signed arithmetic to determine if the result of a signed arithmetic operation is out of range.
+
+            <br><br><strong>Even Parity flag. P :</strong>The parity flag is the accumulator parity flag, 
+            set to a value, 1 or 0, such that the number of ‘1’ bits in the accumulator plus the parity 
+            bit add up to an even number.
+          </p>
+
+
+          <h3>Stack Pointer</h3>
+          <div class="box_70"><img src="assets/images/stackpointer1.png"/><span class="capt_cont">Fig: Stack Pointer Register</span></div>
+
+          <ul class="ul_gen">
+            <li>Address : 0x81H</li>
+            <li>Size : 8 Bit</li>
+            <li>Byte Addressable</li>
+            <li>Contains the address of the data item on top of the stack.</li>
+            <li>Used by subroutine call and return instructions.</li>
+            <li>Stack, in user space of internal RAM, grows upward; the SP is 
+              incremented before pushing and after popping a value.</li>
+            <li>By default, SP is initialized to 0x07H</li>
+            <li>User can initialize SP to desired location.</li>
+            <li>Depending on the initial value of SP, 8051 stack can have different sizes.</li>
+          </ul>
+
+          <p>
+            If register banks 1 to 3 are to be used the SP SFR should be initialised to start 
+            higher up in Internal RAM. The following instruction is often used to initialise the stack:
+
+            <br><br>MOV SP, #2Fh
+          </p>
+
+
+          <h3>Data Pointer</h3>
+          <div class="box_70"><img src="assets/images/data_pointer_reg.png"/><span class="capt_cont">Fig: Associated Registers with Data Pointer.</span></div>
+
+          <ul class="ul_gen">
+            <li>0x83 - 0x82</li>
+            <li>Size : 16 Bit</li>
+            <li>Since the SFR registers are just 8-bits wide the DPTR is stored in two SFR registers, where DPL (82h) holds 
+              the low byte of the DPTR and DPH (83h) holds the high byte of the DPTR.</li>
+            <li>Byte and Word Addressable</li>
+            <li>Used to point data.</li>
+            <li>Used to access external data and code memory.</li>
+            <li>8051 will access external memory at the address indicated by DPTR.</li>
+            <li>DPTR holds the memory addresses for internal and external code access and 
+              external data access (eg. MOVC A,@A+DPTR MOVX A,@DPTR MOVX @DPTR,A )</li>
+            <li>Often used to point to data in external memory.</li>
+            <li>It's the only user accessible 16-bit register.</li>
+            <li>Can be used as temporary storage.</li>
+            <li>Can also be used as two 8-bit registers. DPH #8211; 0x83, DPL #8211; 0x82.</li>
+            <li>MOV DPTR, #2550H is same as
+              <br>MOV DPL, #50H
+              <br>MOV DPH, #25H
+              <br>
+            </li>
+          </ul>
+
+
+          <p>
+            For example, if you wanted to write the value 46h to external data memory location 2500h, 
+            you might use the following:
+
+            <br><br>MOV A, #46h ; Move immediate 8 bit data 46h to A (accumulator)
+            <br>MOV DPTR, #2504h ; Move immediate 16 bit address value 2504h to A.
+            ; Now DPL holds 04h and DPH holds25h.
+            <br>MOVX @DPTR, A ; Move the value in A to external RAM location 2500h. Uses indirect addressing.
+            <br>Note the MOVX (Move X) instruction is used to access external memory.
+          </p>
+
+
+
+          <h3>Accumulator</h3>
+          <div class="box_70"><img src="assets/images/Accumulator-Register-A.jpg"/><span class="capt_cont">Fig: Accumulator or Working Register</span></div>
+
+          <ul class="ul_gen">
+            <li>Called as Accumulator or Acc or Working or A Register.</li>
+            <li>Address: 0xE0</li>
+            <li>Size : 8 Bit</li>
+            <li>Bit and Byte addressable.</li>
+            <li>holds the results of many arithmetic and logical operation of 8051.</li>
+            <li>Used as a general register to store the result of a large number of instructions.</li>
+            <li>Used for all mathematical operations.</li>
+            <li>Used for data transfer operation between CPU and any external memory.</li>
+          </ul>
+
+          <p>
+            This is the conventional accumulator that one expects to find in any computer, 
+            which is used to the hold result of various arithmetic and logic operations. Since 
+            the 8051 microcontroller is just an 8-bit device, the accumulator is, as expected, 
+            an 8 bit register. The accumulator, referred to as ACC or A, is usually accessed 
+            explicitly using instructions such as:
+
+            <br><br>INC A ; Increment the accumulator
+
+            <br><br>However, the accumulator is defined as an SFR register at address E0h. So the
+            following two instructions have the same effect:
+
+            <br><br>MOV A, #52h ; Move immediate the value 52h to the accumulator
+
+            <br><br>MOV E0h, #52h ; Move immediate the value 52h to Internal 
+            RAM location E0h, which is, in fact, the accumulator SFR register.
+
+            <br><br>Usually the first method, MOV A, #52h, is used as this is the most 
+            conventional (and happens to use less space, 2 bytes as oppose to 3 bytes!)
+          </p>
+
+
+
+          <h3>B Register</h3>
+          <div class="box_70"><img src="assets/images/Register-B.jpg"/><span class="capt_cont">Fig: B Register</span></div>
+
+          <ul class="ul_gen">
+            <li>Called as Accumulator or Acc or Working or A Register.</li>
+            <li>Address: 0xF0</li>
+            <li>Size : 8 Bit</li>
+            <li>Bit and Byte addressable.</li>
+            <li>Used as an extension to the Accumulator for multiply and divide instruction.</li>
+            <li>Used along with A register.</li>
+            <li>Used by MUL AB and DIV  AB instruction.</li>
+            <li>MUL AB: Multiplies 8-bit unsigned values in A and B and leaves the 16-bit result in A (low byte) and B (high byte).</li>
+            <li>DIV AB: divided A by B, leaving the integer result in A and remainder in B.</li>
+            <li>The B register can also be used as a general-purpose register.</li>
+          </ul>
+
+
+          <h3>Program Counter</h3>
+          <div class="box_70"><img src="assets/images/program_memory1.png"/><span class="capt_cont">Fig: Program Counter</span></div>
+          <ul class="ul_gen">
+            <li>The only register that is not memory mapped in 8051.</li>
+            <li>Size : 16 Bit (2 Byte)</li>
+            <li>Always contains the memory address of the next instruction to be executed.</li>
+            <li>After execution of one instruction PC is incremented to point to the address of the next instruction to be executed. 
+              If a 2 byte instruction is executed the PC is incremented by 2 and if a 3 byte instruction 
+              is executed the PC is incremented by three so as to correctly point to the next instruction to be executed.</li>
+            <li>A jump instruction (e.g. LJMP) has the effect of causing the program to branch to 
+              a newly specified location, so the jump instruction causes the PC contents to change 
+              to the new address value. Jump instructions cause the program to flow in a non-sequential 
+              fashion, as will be described later.</li>
+            <li>PC will increase automatically.</li>
+            <li>The content of PC will be placed on the address bus to find and fetch the desired instruction.</li>
+            <li>User can not write in PC.</li>
+            <li>Since PC is 16 Bit 8051 can access program address from 0X0000 to 0XFFFF i.e. up to 64 KB.</li>
+            <li>When the 8051 is reset the PC is always initialised to 0000h of the program memory 
+              and is incremented each time an instruction is executed.</li>
+            <li>The first instruction must be placed at 0X0000 of program memory.</li>
+          </ul>
+
+
+
+          <h3>SFR Registers for the Internal Timer</h3>
+          <div class="box_70"><img src="assets/images/tcon-register-8051.png"/><span class="capt_cont">Fig: Timer Control Register</span></div>
+          <ul class="ul_gen">
+            <li>Address : 0x88</li>
+            <li>Size : 8 Bit</li>
+            <li>Bit and Byte Addressable</li>
+            <li>Used to configure and control 8051 Timers.</li>
+          </ul>
+
+          <p>
+            The set up and operation of the on-chip hardware timers will be described later, 
+            but the associated registers are briefly described here:
+          </p>
+
+
+
+          <h3>TMOD - Timer Mode Register</h3>
+          <div class="box_70"><img src="assets/images/tmod1.png"/><span class="capt_cont">Fig: Timer Mode Control Register</span></div>
+          <ul class="ul_gen">
+            <li>Address : 0x89</li>
+            <li>Size : 8 Bit</li>
+            <li>Byte Addressible</li>
+            <li>Used to configure and control 8051 Timers.</li>
+          </ul>
+
+
+
+          <h3>Power Control Register</h3>
+          <div class="box_70"><img src="assets/images/Register-PCON.jpg"/><span class="capt_cont">Fig: Power Control Register</span></div>
+          <ul class="ul_gen">
+            <li>Address : 0x87</li>
+            <li>Size : 8 Bit</li>
+            <li>Byte Addressible</li>
+            <li>Used to control 8051 power modes.</li>
+          </ul>
+
+          <p>
+            It contains various control bits including a control bit, which allows the 8051 to go 
+            to ‘sleep’ so as to save power when not in immediate use.
+          </p>
+
+          <h3>Serial Port Registers</h3>
+          <div class="box_70"><img src="assets/images/scon.png"/><span class="capt_cont">Fig: Serial Control Register</span></div>
+          <p>
+            Programming of the on-chip serial communications port will be described later in the text. 
+            The associated SFR registers, SBUF and SCON, are briefly introduced here, as follows:
+
+            <br><br>The SCON (Serial Control) is an SFR register located at addresses 98h, and it is bitaddressable.
+            <br>SCON configures the behaviour of the on-chip serial port, setting up
+            parameters such as the baud rate of the serial port, activating send and/or receive data,
+            and setting up some specific control flags.
+            <br><br>
+            The SBUF (Serial Buffer) is an SFR register located at address 99h. SBUF is just a
+            single byte deep buffer used for sending and receiving data via the on-chip serial port
+          </p>
+
+
+
+
+          <h3>Interrupt Registers</h3>
+          <div class="box_70"><img src="assets/images/ie_res2.png"/><span class="capt_cont">Fig: Interrupt Control Register</span></div>
+          <ul class="ul_gen">
+            <li>Address : 0xA8</li>
+            <li>Size : 8 Bit</li>
+            <li>Byte & Bit Addressible</li>
+            <li>Used to Enable and Disable Interrupts.</li>
+          </ul>
+
+          <p>
+            Interrupts will be discussed in more detail later. The associated SFR registers are:
+            <br><br>IE (Interrupt Enable) is an SFR register at addresses A8h and is used to enable 
+            and disable specific interrupts. The MSB bit (bit 7) is used to disable all interrupts.
+            <br><br>IP (Interrupt Priority) is an SFR register at addresses B8h and it is bit addressable.
+            <br><br>The IP register specifies the relative priority (high or low priority) of 
+            each interrupt. On the 8051, an interrupt may either be of low (0) priority or high (1) priority.
+          </p>
+
+
+
+
+          <h3>Interrupt Priority Registers</h3>
+          <div class="box_70"><img src="assets/images/IP_res.png"/><span class="capt_cont">Fig: Interrupt Priority Control Register</span></div>
+          <ul class="ul_gen">
+            <li>Address : 0xA8</li>
+            <li>Size : 8 Bit</li>
+            <li>Byte & Bit Addressible</li>
+            <li>Used to Enable and Disable Interrupts.</li>
+          </ul>
+
+
+
+      </td>
+
+	  <td valign=top bgcolor= white>
+		
+      <div class="vdo_lst_cont">
+        <h3>Lesson Video</h3>
+        <iframe width="174" height="120" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+
+      <div class="box_this_lesson">
+        <h3>Lesson Includes:</h3>
+        <ul class="ul_right">
+          <li>Introduction</li>
+          <li>Hardware Discussion</li>
+          <li>Circuit Diagram</li>
+          <li>Assembly Code</li>
+          <li>Post Run Discussion</li>
+          <li>Exercises</li>
+          <li>Tips and Tricks</li>
+        </ul>
+      </div>
+
+
+
+      <div class="box_this_lesson">
+          <h3>Important Downloads</h3>
+          <ul class="ul_right">
+            <li>Proteus 8.7</li>
+            <li>MIDE-51 IDE</li>
+            <li>AVRDUDES</li>
+          </ul>
+      </div>
+
+
+      <div class="box_this_lesson">
+          <span><b>Lesson Contents</b></span>
+          <ul class="ul_right">
+              <li>Circuit Diagram (Proteus)</li>
+              <li>Lesson PDF</li>
+              <li>7seg_1d_8051.asm</li>
+              <li>7seg_2d_8051.asm</li>
+              <li>7segment Datasheet PDF</li>
+              <li>Exercise Solutions</li>
+          </ul>
+      </div>
+
+    </td>
+
+
+	</tr>
+         
+  </table>
+
+  <table width=1000 height=50 align= center border="1">
+	  <tr>
+			<td>Prev topic: Push Button Interfacing with 8051</td>
+			<td>Next topic: LED Matrix interfacing with 8051</td>
+		</tr>
+  </table>
+
+	<div id="footer_common">
+
+    <div class="prj_footer_cell">
+      <strong>Top Tutorial sites </strong>
+        <ul class="ul_footer">
+          <li id="active"><a href="http://www.melab-bd.com/home.html"><strong>Circuit Today</strong></a></li>
+          <li><a href="http://www.melab-bd.com/about.html"><strong>Radio Electronics</strong></a></li>
+          <li><a href="http://www.melab-bd.com/product.html"><strong>MikroE</strong></a></li>
+         </ul>
+    </div>
+
+  </div>
+    
+
+</body>
+
+
+</html>
